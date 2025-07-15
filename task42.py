@@ -1,0 +1,15 @@
+a=str(input("Enter text to write to the file:"))
+file=open("output.txt","w")
+b=file.write(a)
+print("Data successfully written to output.txt.")
+file.close()
+c=str(input("Enter additional text to append:"))
+file1=open("output.txt","w")
+d=file1.write(c)
+file1.close()
+print("Data successfully appended")
+print("Final content of output.txt:")
+with open("output.txt","r") as file2:
+    for line in file2:
+        print(line.strip())
+file2.close()
